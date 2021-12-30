@@ -1,7 +1,7 @@
 {
   "description": "MQTT client to publish/subscribe messaging.",
   "license": "GPL",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "patches": {
     "@/example": {
       "description": "This example uses ESP8266. You can use development boards such as NodeMCU or Wemos.",
@@ -39,28 +39,6 @@
             "pinKey": "HkXK-dGob"
           }
         },
-        "BJkUAWjhd": {
-          "id": "BJkUAWjhd",
-          "output": {
-            "nodeId": "r1m_OZj2u",
-            "pinKey": "H1Gd15UFQ"
-          },
-          "input": {
-            "nodeId": "S1cHR-shO",
-            "pinKey": "r1MCaWi3_"
-          }
-        },
-        "r1QLCWj2u": {
-          "id": "r1QLCWj2u",
-          "output": {
-            "nodeId": "S1cHR-shO",
-            "pinKey": "SJefRbonu"
-          },
-          "input": {
-            "nodeId": "S1vfYWs3O",
-            "pinKey": "rkQTwbs2_"
-          }
-        },
         "rJozlGs3d": {
           "id": "rJozlGs3d",
           "output": {
@@ -70,6 +48,28 @@
           "input": {
             "nodeId": "S1vfYWs3O",
             "pinKey": "BJSrpWTyE"
+          }
+        },
+        "S1QpZWjiK": {
+          "id": "S1QpZWjiK",
+          "output": {
+            "nodeId": "r1m_OZj2u",
+            "pinKey": "H1Gd15UFQ"
+          },
+          "input": {
+            "nodeId": "rkf6bbsiF",
+            "pinKey": "r1MCaWi3_"
+          }
+        },
+        "HySTbbooF": {
+          "id": "HySTbbooF",
+          "output": {
+            "nodeId": "rkf6bbsiF",
+            "pinKey": "SJefRbonu"
+          },
+          "input": {
+            "nodeId": "S1vfYWs3O",
+            "pinKey": "rkQTwbs2_"
           }
         }
       },
@@ -89,7 +89,7 @@
         },
         "S1vfYWs3O": {
           "boundLiterals": {
-            "SyWgnXnJ4": "\"nusabot/pot/\"",
+            "SyWgnXnJ4": "\"nusabot/pot\"",
             "BJSrpWTyE": "\"connected\"",
             "ByQ4aXnyE": "Continuously"
           },
@@ -134,20 +134,20 @@
             "units": "slots"
           }
         },
-        "S1cHR-shO": {
-          "id": "S1cHR-shO",
-          "type": "nusabotid/nusabot-mqtt-broker/nusabot-iot",
-          "position": {
-            "x": 0,
-            "y": 1,
-            "units": "slots"
-          }
-        },
         "HJ-fgzo2d": {
           "id": "HJ-fgzo2d",
           "type": "xod/common-hardware/pot",
           "position": {
             "x": 3,
+            "y": 1,
+            "units": "slots"
+          }
+        },
+        "rkf6bbsiF": {
+          "id": "rkf6bbsiF",
+          "type": "@/nusabot-iot",
+          "position": {
+            "x": 0,
             "y": 1,
             "units": "slots"
           }
