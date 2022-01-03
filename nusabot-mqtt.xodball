@@ -729,11 +729,50 @@
       },
       "path": "@/nusabot-device"
     },
+    "@/string-to-float": {
+      "attachments": [
+        {
+          "content": "\nstruct State {\n};\n\n{{ GENERATED_CODE }}\n\nvoid evaluate(Context ctx) {\n    auto state = getState(ctx);\n    auto str = getValue<input_IN>(ctx);\n    char _str[16];\n    dump(str,_str);\n    emitValue<output_OUT>(ctx, atof(_str));\n}\n\n",
+          "encoding": "utf-8",
+          "filename": "patch.cpp"
+        }
+      ],
+      "nodes": {
+        "H1xA0Oq9x4": {
+          "id": "H1xA0Oq9x4",
+          "position": {
+            "x": -12.2,
+            "y": -2.1,
+            "units": "slots"
+          },
+          "type": "xod/patch-nodes/input-string"
+        },
+        "HJbR0Oqqe4": {
+          "id": "HJbR0Oqqe4",
+          "position": {
+            "x": -12.2,
+            "y": -0.1,
+            "units": "slots"
+          },
+          "type": "xod/patch-nodes/output-number"
+        },
+        "rJRROcqlN": {
+          "id": "rJRROcqlN",
+          "position": {
+            "x": -12.2,
+            "y": -1.1,
+            "units": "slots"
+          },
+          "type": "xod/patch-nodes/not-implemented-in-xod"
+        }
+      },
+      "path": "@/string-to-float"
+    },
     "@/string-to-int": {
       "attachments": [
         {
-          "content": "\nnode {\n    char _str[16];\n\n    void evaluate(Context ctx) {\n        auto state = getState(ctx);\n        auto str = getValue<input_IN>(ctx);\n        dump(str,_str);\n        emitValue<output_OUT>(ctx, atoi(_str));\n    }\n}\n",
-          "encoding": "utf8",
+          "content": "\nstruct State {\n};\n\n{{ GENERATED_CODE }}\n\nvoid evaluate(Context ctx) {\n    auto state = getState(ctx);\n    auto str = getValue<input_IN>(ctx);\n    char _str[16];\n    dump(str,_str);\n    emitValue<output_OUT>(ctx, atoi(_str));\n}\n\n",
+          "encoding": "utf-8",
           "filename": "patch.cpp"
         }
       ],
@@ -767,49 +806,10 @@
         }
       },
       "path": "@/string-to-int"
-    },
-    "@/string-to-float": {
-      "attachments": [
-        {
-          "content": "\nnode {\n    char _str[16];\n\n    void evaluate(Context ctx) {\n        auto state = getState(ctx);\n        auto str = getValue<input_IN>(ctx);\n        dump(str,_str);\n        emitValue<output_OUT>(ctx, atof(_str));\n    }\n}\n",
-          "encoding": "utf8",
-          "filename": "patch.cpp"
-        }
-      ],
-      "nodes": {
-        "H1xA0Oq9x4": {
-          "id": "H1xA0Oq9x4",
-          "position": {
-            "x": -12,
-            "y": -2,
-            "units": "slots"
-          },
-          "type": "xod/patch-nodes/input-string"
-        },
-        "HJbR0Oqqe4": {
-          "id": "HJbR0Oqqe4",
-          "position": {
-            "x": -12,
-            "y": 0,
-            "units": "slots"
-          },
-          "type": "xod/patch-nodes/output-number"
-        },
-        "rJRROcqlN": {
-          "id": "rJRROcqlN",
-          "position": {
-            "x": -12,
-            "y": -1,
-            "units": "slots"
-          },
-          "type": "xod/patch-nodes/not-implemented-in-xod"
-        }
-      },
-      "path": "@/string-to-float"
     }
   },
   "license": "GPL",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "MQTT client to publish/subscribe messaging.",
   "apiKey": "e705305d-7bee-4f9c-a6e8-9a101caf71da",
   "name": "nusabot-mqtt"
